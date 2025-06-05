@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    .content {
+      margin-left: 200px; /* sidebar width */
+      padding: 20px;
+    }
+    .stats {
+      display: flex;
+      gap: 20px;
+    }
+    .stat-box {
+      background: #eee;
+      padding: 20px;
+      border-radius: 8px;
+      width: 150px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .stat-box h2 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .stat-box p {
+      margin: 5px 0 0;
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+<%- include('partials/sidebar.ejs') %>
+
+  <div class="content">
+    <h1>Admin Dashboard</h1>
+    <div class="stats">
+      <div class="stat-box">
+        <h2><%= userCount %></h2>
+        <p>Total Users</p>
+      </div>
+      <div class="stat-box">
+        <h2><%= productCount %></h2>
+        <p>Total Products</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

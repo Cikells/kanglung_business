@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Signup - Kanglung Directory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #000000;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      color: #ffffff;
+    }
+    .signup-container {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      max-width: 500px;
+      width: 100%;
+      padding: 2.5rem 2.5rem 3rem;
+      box-sizing: border-box;
+      color: #000000;
+      margin-top: 400px;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 1.875rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: #000000;
+    }
+    p.subtitle {
+      text-align: center;
+      color: #4b5563;
+      margin-bottom: 2rem;
+    }
+    label {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: #000000;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"],
+    textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.25rem;
+      border-radius: 1rem;
+      border: 1.5px solid #d1d5db;
+      font-size: 1rem;
+      color: #000000;
+      background-color: #f9fafb;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      box-sizing: border-box;
+    }
+    input:focus,
+    textarea:focus {
+      border-color: #000000;
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
+      outline: none;
+    }
+    hr {
+      border-color: #d1d5db;
+      margin: 2rem 0;
+    }
+    button[type="submit"] {
+      width: 100%;
+      background-color: #000000;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem;
+      border-radius: 1rem;
+      font-size: 1.125rem;
+      cursor: pointer;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7),
+                  0 4px 6px -4px rgba(0, 0, 0, 0.7);
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #333333;
+    }
+    .footer-text {
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.875rem;
+      margin-top: 2rem;
+      user-select: none;
+    }
+    @media (max-width: 480px) {
+      .signup-container {
+        padding: 2rem 1.5rem 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2 >Create Account</h2>
+    <p class="subtitle">Join Modern Mart and grow your shop</p>
+
+    <form method="POST" action="/signup" enctype="multipart/form-data" novalidate>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Pema Namgay" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="••••••••" required />
+
+      <hr />
+
+      <label for="shop_name">Shop Name</label>
+      <input type="text" id="shop_name" name="shop_name" placeholder="My Awesome Shop" required />
+
+      <label for="description">Shop Description</label>
+      <textarea id="description" name="description" placeholder="Describe your shop..." rows="3" required></textarea>
+
+      <label for="profileImage">Shop Image</label>
+      <input type="file" id="profileImage" name="profileImage" accept="image/*" required />
+
+      <button type="submit" class="mt-6">Sign Up</button>
+
+      <div class="text-center mt-4">
+      <p class="text-sm text-gray-600">
+        Already have an account? <a href="/login" class="text-black font-semibold hover:underline">Login</a>
+      </p>
+    </div>
+    </form>
+     
+    <div class="flex justify-center items-center mt-6 text-sm">
+  <a href="/" class="flex items-center text-black hover:underline" title="Back to Home">
+    <i class="fas fa-home mr-2"></i>
+    <span>Back to Home</span>
+  </a>
+</div>
+    <p class="footer-text">© 2024 Modern Mart. All rights reserved.</p>
+  </div>
+</body>
+</html>

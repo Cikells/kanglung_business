@@ -1,0 +1,42 @@
+<nav class="sidebar">
+  <ul>
+    <li class="<%= navActive === 'admindashboard' ? 'active' : '' %>">
+      <a href="/admin/admindashboard">Dashboard</a>
+    </li>
+    <li class="<%= navActive === 'users' ? 'active' : '' %>">
+      <a href="/admin/users">User Management</a>
+    </li>
+    <li>
+      <a href="/admin/logout">Logout</a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .sidebar {
+    width: 200px;
+    background: #222;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    color: white;
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar ul li {
+    padding: 15px;
+  }
+  .sidebar ul li.active,
+  .sidebar ul li:hover {
+    background: #444;
+  }
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+</style>
